@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-# This package provides the 'glue' layer between Chromium and WebView.
+# This package provides the system interfaces required to load WebView and allow
+# it to render.
 
 LOCAL_PATH := $(call my-dir)
-CHROMIUM_PATH := external/chromium_org
 
 # Prebuilt com.google.android.webview apk
 include $(CLEAR_VARS)
@@ -126,6 +126,3 @@ LOCAL_SHARED_LIBRARIES += \
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
-
-# Build other stuff
-include $(call first-makefiles-under,$(LOCAL_PATH))
